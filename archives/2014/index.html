@@ -63,6 +63,73 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Test-Markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/22/Test-Markdown/" class="article-date">
+  <time datetime="2014-10-22T23:51:44.000Z" itemprop="datePublished">Oct 22 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/22/Test-Markdown/">Test Markdown</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@(Tech)[Algorithm,Suffix Tree]</p>
+<h2 id="后缀数组学习笔记">后缀数组学习笔记</h2>
+<hr>
+<h4 id="资料">资料</h4>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Suffix_tree" target="_blank" rel="external">Wiki-Suffix Tree</a></li>
+<li><a href="https://www.cs.duke.edu/courses/fall12/compsci260/resources/suffix.trees.in.detail.pdf" target="_blank" rel="external">DukeCS260 - Suffix Trees In Details</a></li>
+<li><a href="http://www.cs.cmu.edu/afs/cs/project/pscico-guyb/realworld/www/papersS04/KaSa03.pdf" target="_blank" rel="external">Simple Linear Work Suﬃx Array Construction</a></li>
+</ul>
+<hr>
+<p>  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Suffix_tree_BANANA.svg/250px-Suffix_tree_BANANA.svg.png" alt="Suffix Tree Example"><br> <code>Figure 1: 以字符串&#39;BANANA&#39;构造的后缀树</code></p>
+<hr>
+<h4 id="定义">定义</h4>
+<p>对于长度为$N$的字符串$S$, 其后缀树:</p>
+<ol>
+<li>有$N$个叶子节点</li>
+<li>除了根节点以及叶子节点外, 每个节点至少有两个字节点</li>
+<li>每一条边都表示为字符串$S$的一个非空子串</li>
+<li>从一个节点出发的任意两条边不会以同样的字符开头</li>
+<li>把从根节点出发到叶子节点$i$所经过路径上的边所代表的子串连接起来，正好是$S[i:]$</li>
+</ol>
+<hr>
+<h4 id="在字符串后加入特殊字符(Termination_Character)">在字符串后加入特殊字符(Termination Character)</h4>
+<p>以字符串$S = {abcab}$为例, 根据定义5, 子串$S’[4..5] = {ab}$会由一条边代表, 并且这条边的一头是根节点, 另一头是叶子节点. 而对于子串$S’[1..5]={abcab}$, 显然与前者不在同一条路经上(因为前者已经是叶子节点), 这时候两条从根节点出发的边都以字符$a$开头, 与定义4矛盾.</p>
+<p>所以需要在字符串结尾加入一个特殊字符, 要求这个特殊字符没有在字符串中出现过.</p>
+<hr>
+<h4 id="$\Theta(n)$_的构造算法">$\Theta(n)$ 的构造算法</h4>
+<p>对于字符串$S = {abcab}$</p>
+<ol>
+<li>初始化: 插入字符串</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/10/22/Test-Markdown/" data-id="6296tl4236otc85l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/10/22/hello-world/" class="article-date">
@@ -132,7 +199,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -142,6 +209,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/10/22/Test-Markdown/">Test Markdown</a>
+          </li>
         
           <li>
             <a href="/2014/10/22/hello-world/">Hello World</a>
